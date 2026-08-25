@@ -1,0 +1,138 @@
+@media screen and (max-height: 940px) {
+    .elmoreden .elmoreden__background .background__fire {
+        display: none;
+    }
+
+    .elmoreden__character-group .character-group__fire {
+        margin-bottom: -100px;
+        transform: translateY(50px);
+    }
+    
+}
+
+@media screen and (max-height: 790px) {
+    .elmoreden .elmoreden__button-group {
+        margin-top: 0px !important;
+    }
+
+    .elmoreden .elmoreden__logo img {
+        margin-bottom: 32px;
+    }    
+
+    .elmoreden .elmoreden__language {
+        margin-top: 0 !important;
+        margin-bottom: 30px;
+    }
+
+    .elmoreden .elmoreden__group .elmoreden__about {
+        margin-top: 25px;
+    }
+
+    .elmoreden .elmoreden__group {
+        margin-right: -20px;
+    }
+
+    .elmoreden__character-group .character-group__fire {
+        margin-bottom: -150px;
+        transform: translateY(50px);
+    }
+
+    .elmoreden__character-group .character-group__eyes {
+        top: 15.3%;
+        left: 42.5%;
+    }
+}
+
+@media screen and (max-height: 1055px) {
+    .elmoreden .elmoreden__button-group {
+        margin-top: 0px !important;
+    }
+
+    .elmoreden .elmoreden__logo img {
+        margin-bottom: 32px;
+    }    
+
+    .elmoreden .elmoreden__language {
+        margin-top: 60px !important;
+    }
+
+    .elmoreden .elmoreden__group .elmoreden__about {
+        margin-top: 45px;
+    }
+
+    .elmoreden .elmoreden__group {
+        margin-right: -20px;
+    }
+}
+
+@media only screen and (max-device-width: 1400px) {
+    .elmoreden .elmoreden__character-group {
+        display: none;
+    }
+
+    .elmoreden .elmoreden__group {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .elmoreden .elmoreden__background .background__fire,
+    .elmoreden .elmoreden__background .background__character,
+    .elmoreden .elmoreden__background .background__rays,
+    .elmoreden .elmoreden__background .background__purple-eyes,
+    .elmoreden .elmoreden__background .background__red-eyes,
+    .elmoreden .elmoreden__background .background__light-character,
+    .elmoreden .elmoreden__background .background__light-fire {
+        display: none;
+    }
+
+    .elmoreden .elmoreden__background .background__smoke {
+        transform: scale(3);
+    }
+}
+
+@media only screen and (max-device-width: 890px) {
+    .elmoreden .elmoreden__tilte-group {
+        height: max-content;
+    }
+
+    .elmoreden .elmoreden__tilte-group .elmoreden__subtitle {
+        font-size: 4.7vw;
+    }
+
+    .elmoreden .elmoreden__tilte-group .elmoreden__title {
+        font-size: 16vw;
+    }
+
+    .elmoreden .elmoreden__group .elmoreden__about {
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-device-width: 650px) {
+    .preloader svg {
+        transform: scale(3.3);
+    }
+}
+
+@media only screen and (max-device-width: 500px) {
+    .elmoreden .elmoreden__group .elmoreden__about {
+        font-size: 4vw;
+        margin-top: 30px;
+    }
+
+    .elmoreden .elmoreden__button-group {
+        margin-top: 30px;
+    }
+
+    .elmoreden .elmoreden__language {
+        margin-top: 60px;
+    }
+
+    @keyframes preloaderEnd {
+        100% {
+            opacity: 0;
+        }
+    }
+}

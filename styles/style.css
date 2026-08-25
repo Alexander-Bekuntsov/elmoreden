@@ -1,0 +1,682 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url(fonds/Cinzel/cinzel_regular.ttf);
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url(fonds/Raleway/Raleway.ttf);
+}`
+
+* {
+    font-family: 'Cinzel';
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #101524;
+    overflow: hidden;
+}
+
+body.animation-stop .elmoreden * {
+    animation: none !important;
+}
+
+body.script-top .elmoreden__character-group .character-group__rays {
+    opacity: 0.2;
+}
+
+body.script-top .elmoreden__character-group .purple-eyes,
+body.script-top .elmoreden__character-group .red-eyes {
+    opacity: 0;
+}
+
+body.script-top .elmoreden__character-group .character-group__fire {
+    opacity: 0.2;
+}
+
+body.script-top .elmoreden__character-group .character-group__character-light {
+    background: rgba(255, 255, 255, 0.62);
+    filter: blur(200px);
+}
+
+body.script-middle .elmoreden__character-group .character-group__rays {
+    opacity: 0;
+}
+
+body.script-middle .elmoreden__character-group .purple-eyes {
+    opacity: 0;
+}
+
+body.script-middle .elmoreden__character-group .character-group__character-light {
+    background: rgba(236, 238, 255, 0.736);
+    filter: blur(200px);
+}
+
+body.script-middle .elmoreden__character-group .character-group__fire {
+    opacity: 1;
+}
+
+body.script-bottom .elmoreden__character-group .character-group__rays {
+    opacity: 1;
+}
+
+body.script-bottom .elmoreden__character-group .character-group__character-light {
+    height: 700px;
+    background: rgba(236, 238, 255, 0.648);
+    filter: blur(200px);
+}
+
+/* body.script-bottom .elmoreden__character-group .character-group__light-fire {
+    opacity: 0.8;
+} */
+
+body.script-bottom .elmoreden__character-group .red-eyes {
+    opacity: 0;
+}
+
+body.script-bottom .elmoreden__background .background__fire {
+    opacity: 0.3;
+}
+
+body.script-bottom .elmoreden__character-group .character-group__fire {
+    opacity: 0.1;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+.elmoreden {
+    display: flex;
+    position: fixed;
+
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: opacity 10s, visibility 0s linear 10s;
+}
+
+/* .preloader {
+    display: none;
+    visibility: hidden;
+} */
+
+.elmoreden.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.elmoreden * {
+    z-index: 2;
+}
+
+.elmoreden .elmoreden__logo img {
+    width: 308px;
+    height: 205px;
+    z-index: 65;
+    margin-bottom: 92px;
+    cursor: pointer;
+}
+
+.elmoreden .elmoreden__group {
+    text-align: center;
+    z-index: 65;
+    width: max-content;
+    margin-right: -150px;
+}
+
+.elmoreden .elmoreden__tilte-group {
+    width: 790px;
+    height: 164px;
+}
+
+.elmoreden .elmoreden__tilte-group .elmoreden__subtitle {
+    width: 100%;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 85%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.elmoreden .elmoreden__tilte-group .elmoreden__title {
+    width: 100%;
+    font-weight: 400;
+    font-size: 143px;
+    line-height: 85%;
+    text-align: center;
+    color: #FFFFFF;
+
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.6);
+}
+
+.elmoreden .elmoreden__group .elmoreden__about {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+
+    line-height: 145%;
+    text-align: center;
+    color: #FFFFFF;
+
+    margin-top: 66px;
+}
+
+.elmoreden .elmoreden__button-group {
+    position: relative;
+    width: 348px;
+    height: 200px;
+
+    margin-top: 49px;
+
+    /* transform: translateY(-6px);
+    transform-origin: center bottom;
+    animation-name: transform;
+    animation-duration: 7s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.elmoreden .elmoreden__button-group img.button-group__background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 277.82px;
+    height: 95px;
+    pointer-events: all;
+    transition: 0.3s;
+}
+
+.elmoreden .elmoreden__button-group img.button-group__background:hover {
+    filter: brightness(110%);
+}
+
+.elmoreden .elmoreden__button-group img.button-group__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.elmoreden .elmoreden__button-group .button-group__button {
+    pointer-events: all;
+    cursor: pointer;
+    z-index: 60;
+    opacity: 0;
+}
+
+.elmoreden .elmoreden__language {
+    margin-top: 105px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 85%;
+    text-align: center;
+    color: #B8A2AA;
+    user-select: none;
+}
+
+.elmoreden .elmoreden__language span {
+    cursor: pointer;
+}
+
+.elmoreden .elmoreden__language .select {
+    color: #FFFFFF;
+    cursor: default;
+}
+
+.elmoreden .elmoreden__language .hr {
+    margin: 0 19px 20px;
+    width: 28px;
+    height: 1px;
+
+    opacity: 0.1;
+    border-left: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+    cursor: default;
+}
+
+.elmoreden__character-group {
+    position: relative;
+}
+
+.elmoreden__character-group {
+    height: calc(100vh - 100px);
+    margin: 100px 0 -2px 0;
+}
+
+.elmoreden__character-group img {
+    height: 100%;
+}
+
+.elmoreden__character-group .character-group__character {
+    z-index: 60;
+}
+
+.elmoreden__character-group .character-group__eyes {
+    position: absolute;
+    top: 15.4%;
+    left: 42.1%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 94.8%);
+    height: 12px;
+    mix-blend-mode: multiply;
+    transition: 1s;
+}
+
+.elmoreden__character-group .character-group__rays {
+    position: absolute;
+    height: 60%;
+    top: -150px;
+    left: -32%;
+    z-index: -1;
+    transition: 2s;
+    object-fit: contain;
+    mix-blend-mode: exclusion;
+/* 
+    transform: translateX(-10px) translateY(-20px);
+    transform-origin: center bottom;
+    animation-name: rays;
+    animation-duration: 6s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.elmoreden__character-group .character-group__character-light {
+    position: absolute;
+    width: 416px;
+    height: 416px;
+    top: -1%;
+    left: 17%;
+    transition: 2s;
+
+    background: #BEC4EA;
+    filter: blur(400px);
+    z-index: -2;
+}
+
+.elmoreden__character-group .character-group__light-fire {
+    position: absolute;
+    width: 416px;
+    height: 364px;
+    bottom: -20%;
+    left: 20%;
+    transition: 2s;
+
+    background: #FF2E00;
+    filter: blur(100px);
+    z-index: -1;
+}
+
+.elmoreden__character-group .character-group__fire {
+    position: absolute;
+    width: 100%;
+    height: 507.51px;
+    left: -70px;
+    bottom: 0;
+    margin-bottom: -50px;
+    transform: translateY(50px);
+    object-fit: scale-down;
+    z-index: -2;
+    transition: 2s;
+}
+  
+.character-group__eyes-group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.elmoreden .elmoreden__background {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.elmoreden .elmoreden__background * {
+    user-select: none;
+    pointer-events: none;
+}
+
+.elmoreden .elmoreden__background .background__main {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.elmoreden .elmoreden__background .background__sparks {
+    position: absolute;
+    width: 348px;
+    height: 200px;
+
+    mix-blend-mode: exclusion;
+    border-radius: 40px;
+    filter: blur(2px);
+
+    z-index: 45;
+}
+
+.elmoreden .elmoreden__background .background__sparks.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.elmoreden .elmoreden__background .background__snow,
+.elmoreden .elmoreden__background .background__noice,
+.elmoreden .elmoreden__background .background__smoke {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 1px;
+    top: 1px;
+    z-index: 46;
+    object-fit: cover;
+}
+
+.elmoreden .elmoreden__background .background__snow {
+    /* transform: translateX(-200px) scale(1.3); */
+    /* transform-origin: center bottom;
+    animation-name: transform;
+    animation-duration: 30s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.elmoreden .elmoreden__background .background__noice {
+    z-index: 48;
+}
+
+.elmoreden .elmoreden__background .background__smoke {
+    mix-blend-mode: overlay;
+
+    transform: translateX(-200px) scale(1.3);
+    /* transform-origin: center bottom;
+    animation-name: transform;
+    animation-duration: 30s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.elmoreden .elmoreden__background .background__grandient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(61.28deg, rgba(32, 51, 121, 0.2) 9.67%, rgba(13, 18, 23, 0) 55.57%), linear-gradient(338.29deg, rgba(191, 0, 0, 0.25) 30.42%, rgba(106, 110, 163, 0.075) 79.17%), rgba(10, 11, 27, 0.8);
+    z-index: 10;
+    transition: background-image 0.5s linear;
+}
+
+.elmoreden .elmoreden__background .background__purple-eyes,
+.elmoreden .elmoreden__background .background__red-eyes {
+    position: absolute;
+    width: 44.15px;
+    height: 8.24px;
+    left: 1246px;
+    bottom: 878px;
+    z-index: 60;
+
+    transition: 1.8s;
+}
+
+.elmoreden .elmoreden__background .background__light-character {
+    position: absolute;
+    width: 416px;
+    height: 416px;
+    left: 1060px;
+    top: 118px;
+    transition: 2s;
+
+    background: rgba(190, 196, 234, 0.7);
+    filter: blur(400px);
+    z-index: 48;
+}
+
+.elmoreden .elmoreden__background .background__light-fire {
+    position: absolute;
+    width: 482px;
+    height: 364px;
+    left: 1091px;
+    top: 809px;
+
+    background: rgb(255, 47, 0);
+    filter: blur(164px);
+    z-index: 47;
+    transition: 2s;
+
+    transform: translateY(-50px);
+    opacity: 0.4;
+    /* transform-origin: center bottom;
+    animation-name: rays;
+    animation-duration: 7s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.elmoreden .elmoreden__background .background__light-character-sword {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1480px;
+    top: 530px;
+
+    background: rgba(255, 119, 0, 0.825);
+    filter: blur(50px);
+    z-index: 50;
+
+    opacity: 0.2;
+    /* transform-origin: center bottom;
+    animation-name: transform;
+    animation-duration: 10s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
+}
+
+.elmoreden .elmoreden__background .background__light {
+    position: absolute;
+    width: 1000px;
+    height: 400px;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+
+    background: rgba(252, 8, 8, 0.486);
+    filter: blur(100px);
+    transition: 8s;
+}
+
+.elmoreden .elmoreden__background .background__blackout {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: -1px 0px 400px 80px rgba(0, 0, 0, 0.39) inset;
+    z-index: 999;
+}
+
+.preloader {
+    display: flex;
+    position: fixed;
+
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #101524;
+    z-index: 300;
+
+    animation-name: preloaderEnd;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-duration: 2.5s;
+    animation-delay: 3.5s;
+    pointer-events: none;
+}
+
+.preloader svg path.letter,
+.preloader svg path.sword,
+.preloader svg path.thorn {
+    animation-name: preloader;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    fill-opacity: 0;
+}
+
+.preloader svg path.sword {
+    animation-duration: 0.2s;
+    animation-delay: 3s;
+    transform: translateY(-100%);
+}
+
+.preloader svg path.letter {
+    animation-duration: 0.3s;
+    transform: translateX(-17%);
+    fill: white;
+}
+
+.preloader svg path.thorn {
+    animation-duration: 0.5s;
+    animation-delay: 3.5s;
+    transform: rotateX(90deg) translateY(-10%);
+}
+
+.preloader svg path.letter-1 {
+    animation-delay: 0.2s;
+}
+
+.preloader svg path.letter-2 {
+    animation-delay: 0.4s;
+}
+
+.preloader svg path.letter-3 {
+    animation-delay: 0.6s;
+}
+
+.preloader svg path.letter-4 {
+    animation-delay: 0.8s;
+}
+
+.preloader svg path.letter-5 {
+    animation-delay: 1s;
+}
+
+.preloader svg path.letter-6 {
+    animation-delay: 1.2s;
+}
+
+.preloader svg path.letter-7 {
+    animation-delay: 1.4s;
+}
+
+.preloader svg path.letter-8 {
+    animation-delay: 1.6s;
+}
+
+.preloader svg path.letter-9 {
+    animation-delay: 1.8s;
+}
+
+.preloader svg path.letter-10 {
+    animation-delay: 2s;
+}
+
+.preloader svg path.letter-11 {
+    animation-delay: 2.2s;
+}
+
+.preloader svg path.letter-12 {
+    animation-delay: 2.4s;
+}
+
+.preloader svg path.letter-13 {
+    animation-delay: 2.6s;
+}
+
+.flex {
+    display: flex;
+    width: 100%;
+}
+
+.flex.flex-jc-center {
+    justify-content: center;
+}
+
+@keyframes transform {
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@keyframes rays {
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes preloader {
+    to {
+        transform: none;
+        fill-opacity: 1;
+    }
+}
+
+@keyframes preloaderEnd {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fire {
+    0% {
+        transform: scale(1.07, 0.85) skew(-2deg, -12deg) skew(-2deg, -12deg);
+        -webkit-transform: scale(1.07, 0.85) rotate(-2deg)skew(-2deg, -12deg) translate(2px, 0);
+        -moz-transform: scale(1.07, 0.85) rotate(-2deg) skew(-2deg, -12deg) translate(2px, 0);
+    }
+
+    20% {
+        transform: skew(-2deg, -12deg);
+    }
+
+    40% {
+        transform: scale(1.07, 0.85);
+    }
+
+    100% {
+        transform: none;
+    }
+}
